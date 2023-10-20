@@ -6,28 +6,30 @@
 # été joués.
 
 # importing the random module
-import random
+from random import randint
 
 level = int(input('Enter level from 1 to 3 : '))
 
 if level == 1 :
-    randomLevel = 10
+    random_level = 10
 elif level == 2 :
-    randomLevel = 100
+    random_level = 100
 elif level == 3 :
-    randomLevel = 1000
+    random_level = 1000
 
-print(f'you choose level {level} with randon number max {randomLevel}')
+print(f'you choose level {level} with randon number max {random_level}')
 
-randomNumber = random.randint(0,randomLevel)
-personNumber = 0
+random_number = randint(0,random_level)
+person_number = 0
+attempts = 1
 
-while personNumber != randomNumber : 
-    print("Tapez un nombre entier :")
-    personNumber = int(input())
-    if personNumber > randomNumber :
-            print("c'est moins\n")
-    elif personNumber < randomNumber:
-            print("c'est plus\n")
+while person_number != random_number : 
+    print("Tapez un nombre entier : ")
+    person_number = int(input())
+    attempts += 1
+    if person_number > random_number :
+        print("c'est moins\n")
+    elif person_number < random_number:
+        print("c'est plus\n")
     else :
-            print("c'est gagné")
+        print(f"c'est gagné avec {attempts} essai(s)")
