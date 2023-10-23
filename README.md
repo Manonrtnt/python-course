@@ -2,7 +2,7 @@
 
 ## Python fundamentals
 
-### main.py
+### [main.py](/course/main.py)
 Test virtual environment on vs code
 > create : `py -m venv conv-venv`
 
@@ -13,7 +13,7 @@ Test virtual environment on vs code
   print(first_name)
 ```
 ---
-### convert.py
+### [convert.py](/course/convert.py)
 > Écrire un programme qui convertit en m/h une vitesse donnée en km/h.
 > Rappel : 1 mile = 1,609 km
 
@@ -31,8 +31,8 @@ Test virtual environment on vs code
   print(f'your value {input} km/h in m/s is: {convert:.2F}')
 ```
 ---
-### more_less.py
-> Écrire un programme qui créera une nouvelle liste en ne gardant que les valeurs uniques.
+### [more_less.py](/course/more_less.py)
+> Faire le jeu du plus ou moins
 ```python
   import random
 
@@ -60,3 +60,57 @@ Test virtual environment on vs code
   elif level == 3 :
       randomLevel = 1000
 ```
+---
+## [unique_value.py](/course/unique_value.py)
+> Écrire un programme qui créera une nouvelle liste en ne gardant que les valeurs uniques.
+```python
+  from collections import Counter
+
+  number = [8, 7, 11, 7, 2, 10, 5, 8]
+
+  # Traverse for all elements
+  def uniqueListAppend(list):
+      if number not in result :
+          result.append(number)
+      
+      print(result)
+
+  # Use collection
+  def uniqueWithCounter(list):
+      #using * symbol
+      print(*Counter(list))
+
+  print("the unique values from 1st list is")
+  uniqueListAppend(number)
+  uniqueWithCounter(number)
+```
+---
+## [multiplication_table.py](/course/multiplication_table.py)
+> L’utilisateur entre un nombre. Le programme stock
+> les 10 premiers résultats de la table de
+> multiplication choisie par l’utilisateur dans une
+> liste puis affiche cette liste.
+
+> BONUS : Signaler au passage, à l’aide d’une astérisque, ceux qui sont des multiples de 3 
+
+```python
+  input = int(input('Quelle table voulez-vous afficher ? '))
+  multiplicationList =  []
+
+  for i in range(1,10):
+      result = i*input
+      if result % 3 == 0 :
+          result3 = str(result) + "*"
+          multiplicationList.append(result3)
+      else :
+          multiplicationList.append(result)
+
+  print(multiplicationList)
+```
+---
+## [spellPhoneNumber.py](/course/spellPhoneNumber.py)
+> Écrire un programme qui épellera un numéro de téléphone en toute lettre.
+```python
+
+```
+---
