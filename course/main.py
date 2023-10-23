@@ -22,3 +22,46 @@ print(user.values())
 # (Liste) de tuples (clef, valeur) du dictionnaire
 print(user.items())
 # dict_items([('last_name', 'Doe'), ('first_name', 'John'), ('age', 20)])
+
+
+f = open('course\data\poem.txt')
+poem = f.read()
+# Debug plus facilement
+print(type(f))
+f.close()
+print(poem)
+
+try : 
+    with open('./data/poem.txt') as f:
+        poem = f.read()
+        print(poem)
+except FileNotFoundError : 
+    print('Fichier non trouvé')
+
+# Ecrire dans fichier txt.
+oceans = [
+    "Pacific",
+    "Atlantic",
+    "Indian",
+    "Southern",
+    "Arctic"
+]
+with open("oceans.txt", "w") as f:
+    for ocean in oceans:
+        f.write(ocean)
+        f.write("\n")
+    # Autre possibilité
+    # print(ocean, file=f)
+
+# a pour append 
+oceans = [
+    "Southern",
+    "Arctic"
+]
+with open("oceans.txt", "a") as f:
+    for ocean in oceans:
+        f.write(ocean)
+        f.write("\n")
+    # Autre possibilité
+    # print(ocean, file=f)
+
