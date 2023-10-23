@@ -4,18 +4,15 @@
 from collections import Counter
 
 number = [8, 7, 11, 7, 2, 10, 5, 8]
+result = []
 
 # Traverse for all elements
 def uniqueListAppend(list):
-    # initialize a null list
-    unique_list = []
-    # traverse for all elements
-    for x in list:
-        # check if exists in unique_list or not
-        if x not in unique_list:
-            unique_list.append(x)
-    # print list
-    print(unique_list)
+    if number not in result :
+        result.append(number)
+    
+    print(result)
+
 
 # Use collection
 def uniqueWithCounter(list):
