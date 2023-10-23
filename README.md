@@ -1,5 +1,7 @@
 # python-course
 
+![Static Badge](https://img.shields.io/badge/3.12.0-Python-orange)
+
 ## Python fundamentals
 
 ### [main.py](/course/main.py)
