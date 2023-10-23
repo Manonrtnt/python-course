@@ -1,6 +1,7 @@
 # python-course
 
-![Static Badge](https://img.shields.io/badge/3.12.0-Python-orange)
+![Static Badge](https://img.shields.io/badge/3.12.0-Python-blue)
+![Static Badge](https://img.shields.io/badge/-yellow?logo=python)
 
 ## Python fundamentals
 
